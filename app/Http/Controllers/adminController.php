@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\depart;
+use App\reservation;
+use App\User;
 use Illuminate\Http\Request;
 
 class adminController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware("authM");
+    }
     function admin(){
         return view('back-end.admin');
     }
@@ -13,13 +20,16 @@ class adminController extends Controller
         return view('back-end.guichet');
     }
     function listereserve(){
-        return view('back-end.listereservation');
+        $reservation=reservation::all();
+        return view('back-end.listereservation',compact('reservation'));
     }
     function listetrajet(){
-        return view('back-end.listetrajet');
+        $trajets=depart::all();
+        return view('back-end.listetrajet',compact('trajets'));
     }
     function listeutilisateur(){
-        return view('back-end.listeutilisateur');
+        $user=User::all();
+        return view('back-end.listeutilisateur',compact('user'));
     }
     function modiftrajet(){
         return view('back-end.modifiertrajet');

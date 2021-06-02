@@ -79,12 +79,14 @@
               <p>Reservations</p>
             </a>
           </li>
+          @if (Auth::user()->role_id==1)
           <li class="nav-item">
             <a href="{{url('listeutilisateur')}}" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>Utilisateurs</p>
             </a>
           </li>
+          @endif
           <li class="nav-item">
             <a href="{{url('listetrajet')}}" class="nav-link">
               <i class="nav-icon fas fa-road"></i>

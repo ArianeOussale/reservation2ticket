@@ -54,3 +54,11 @@ Route::post('trajet',"trajetController@trajet");
 
 Route::post('reserver',"reserverController@reserver");
 
+Route::get('valider/{id}',"reserverController@valider");
+
+Route::get('annuler/{id}',"reserverController@annuler");
+
+Route::get('myreserve',"reservationController@myreserve");
+
+
+

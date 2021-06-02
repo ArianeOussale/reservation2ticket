@@ -24,6 +24,9 @@
               </li>
               @auth
               <li class="nav-item ">
+                <a class="nav-link text-white " href="{{url('myreserve')}}"> <h5>Mes Réservations</h5></a>
+              </li>
+              <li class="nav-item ">
                 <a class="nav-link text-white " href="{{url('reservation')}}"> <h5>Réserver</h5></a>
               </li>
               <li class="nav-item">
