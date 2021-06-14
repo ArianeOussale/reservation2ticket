@@ -19,4 +19,9 @@ class connexionController extends Controller
             }
 
         }
+
+        function deconnect(){
+            Auth::logout();
+            return redirect("admin");
+        }
 }

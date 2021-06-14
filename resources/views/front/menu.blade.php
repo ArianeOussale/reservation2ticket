@@ -9,22 +9,23 @@
     <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
     <title>Accueil</title>
 </head >
-<body style="background-image: url({{asset('images/car3.jpg')}});background-repeat:no-repeat;background-size:cover">
+<body style=" background-image: url({{asset('images/car3.jpg')}});background-repeat:no-repeat;background-size:cover">
+
+
 
     <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-        <div class="container-fluid">
-          <a class="navbar-brand text-white" href="#"><h5>VoyaServe</h5></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse d-inline-flex justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
+        <a class="navbar-brand" href="#">VoyaServe</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav justify-content-end w-100">
+            <li class="nav-item">
                 <a class="nav-link active text-white" aria-current="page" href="{{url('/')}}"><h5> Accueil</h5></a>
               </li>
               @auth
               <li class="nav-item ">
-                <a class="nav-link text-white " href="{{url('myreserve')}}"> <h5>Mes Réservations</h5></a>
+                <a class="nav-link text-white " href="{{url('myreserve')}}"> <h5>Mes réservations</h5></a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link text-white " href="{{url('reservation')}}"> <h5>Réserver</h5></a>
@@ -40,12 +41,14 @@
                 <a class="nav-link text-white" href="{{url('connexion')}}"><h5>Se connecter</h5></a>
               </li>
               @endauth
-            </ul>
-          </div>
+          </ul>
         </div>
       </nav>
-
-      @yield('contenu')
-
+       <div class="container-fluid">
+        @yield('contenu')
+       </div>
+      
+      <script src="{{asset('jquery-3.6.0.min.js')}}"></script>
+      <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 </body>
 </html>

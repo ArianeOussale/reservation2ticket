@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="{{asset('admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('admin-lte/dist/css/adminlte.min.css')}}">
+  @yield('style')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -45,8 +46,8 @@
     <ul class="navbar-nav ml-auto">
 
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-user"></i>
+          <a class="nav-link" href="{{url('profil')}}">
+            <i class="far fa-user"></i>
         </a>
       </li>
     </ul>
@@ -91,6 +92,12 @@
             <a href="{{url('listetrajet')}}" class="nav-link">
               <i class="nav-icon fas fa-road"></i>
               <p>Trajets</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url('deconnect')}}" class="nav-link">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>Deconnexion</p>
             </a>
           </li>
         </ul>

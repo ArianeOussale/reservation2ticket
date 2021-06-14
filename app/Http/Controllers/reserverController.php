@@ -17,10 +17,14 @@ class reserverController extends Controller
 
     }
     function valider($id){
-       dd($id);
+        $reserve=reservation::find($id);
+        $reserve->update(["statut"=>"validée"]);
+        return redirect('listereserve');
     }
 
     function annuler ($id){
-        dd(reservation::find($id));
+        $reserve=reservation::find($id);
+        $reserve->update(["statut"=>"annulée"]);
+        return redirect('listereserve');
     }
 }

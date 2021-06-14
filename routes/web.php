@@ -1,6 +1,7 @@
 <?php
 
 use App\depart;
+use App\Http\Controllers\adminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,7 +48,7 @@ Route::get('utilisateur',"adminController@utilisateur");
 Route::get('connect',"connexionController@connect");
 
 Route::post('connectform',"connexionController@connectform");
-
+Route::get('deconnect',"connexionController@deconnect");
 Route::post('ajoututilisateur',"userController@ajoututilisateur");
 
 Route::post('trajet',"trajetController@trajet");
@@ -60,5 +61,7 @@ Route::get('annuler/{id}',"reserverController@annuler");
 
 Route::get('myreserve',"reservationController@myreserve");
 
+Route::get('profil',"userController@profil");
+Route::post('profil',"userController@profilform");
 
-
+Route::get('supprimer/{id}',"userController@supprimer");

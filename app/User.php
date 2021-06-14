@@ -37,4 +37,7 @@ class User extends Authenticatable
     function user_reservations(){
         return $this->hasMany(reservation::class);
      }
+     function role(){
+         return $this->belongsto(role::class);
+     }
 }

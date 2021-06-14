@@ -2,7 +2,7 @@
 
 @section('contenu')
 <div>
-<h1 class="text-center mt-3">Mes trajets</h1>
+<h1 class="text-center mt-3">Mes réservations</h1>
 
 <div class="container">
 <div class="row justify-content-center mt-5">
@@ -34,8 +34,8 @@
            <tbody class="text-light">
                @foreach ($reservations as  $reservation)
                <tr>
-                <td>{{$reservation->trajet->depart." - ".$reservation->trajet->arrivee}}</td>
-                <td>{{$reservation->trajet->heure}}</td>
+                <td>{{$reservation->depart->depart." - ".$reservation->depart->arrivee}}</td>
+                <td>{{$reservation->depart->heure}}</td>
                 <td>{{$reservation->statut}}</td>
             </tr>
                @endforeach
@@ -53,3 +53,4 @@
 
 </div>
 @endsection
+

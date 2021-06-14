@@ -9,7 +9,7 @@
     <title>inscription</title>
 </head>
 
- <body class="h-100" style="background-image: url({{asset('images/bus5.jpg')}});background-repeat:no-repeat;background-size:cover">
+ <body class="h-100" style="background-image: url({{asset('images/car.jpg')}});background-repeat:no-repeat;background-size:cover">
     </div>
     <div class="container-fluid row m-0  justify-content-center h-100">
         <div class="d-flex flex-column col-md-4 justify-content-center h-100">
@@ -33,5 +33,7 @@
         </div>
 
     </div>
+
+
 </body>
 </html>
